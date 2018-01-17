@@ -52,7 +52,8 @@ A really helpful resource for doing this project and creating smooth trajectorie
   
 ### 2. Keep the car on the lane
   For this purpose we learned during previous lessons about Frenet coordianates. Frenet coordinates are a way of representing position on a road using the variables s and d. The s coordinate represents distance along the road (also known as longitudinal displacement) and the d coordinate represents side-to-side position on the road (also known as lateral displacement).
-  ![frenet 1][./img/frenet-1.png] ![frenet 2][./img/frenet-5.png]
+  
+  ![frenet 1](./img/frenet-1.png) ![frenet 2](./img/frenet-5.png)
   
 ### 2. Do not be faster than the speed limit
   Since we do not want our car to have fees, we have to set a MAX_SPEED variable that the car will have to respect
