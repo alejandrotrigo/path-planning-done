@@ -47,13 +47,26 @@ A really helpful resource for doing this project and creating smooth trajectorie
 
 ## Project walkthrough
 
-### 1. Get the car moving
+### 1. Get the car moving:
   The car will move following the waypoints we receive from the data, so, in order to make the car start moving and going through the waypoints, we have to set the acceleration and the path the car will follow. The path is made by the 50 waypoints in front of the car and the acceleration is limited to 0.224 miles/s^2. That will be enought to get the car moving, but it will keep accelerating forever and speeding up the speed limit, and we do not want that. The car will also go through the forest when the lane is not straight (Lines 401 - 422)
   
-### 2. Keep the car on the lane
+### 2. Keep the car on the lane:
   For this purpose we learned during previous lessons about Frenet coordianates. Frenet coordinates are a way of representing position on a road using the variables s and d. The s coordinate represents distance along the road (also known as longitudinal displacement) and the d coordinate represents side-to-side position on the road (also known as lateral displacement).
   
   ![frenet 1](./img/frenet-1.png) ![frenet 2](./img/frenet-5.png)
   
-### 2. Do not be faster than the speed limit
-  Since we do not want our car to have fees, we have to set a MAX_SPEED variable that the car will have to respect
+  So we just have to get the Frenet coordinates and follow a new "straight" path.
+  
+### 3. Do not be faster than the speed limit:
+  Since we do not want our car to have fees, we have to set a `MAX_SPEED` variable that the car will have to respect. If the speed is higher than the limit then it has to stop accelerating.
+  
+### 4. Drive smooth please:
+  No body wants a car that is accelerating and braking super hard, neither going to right or left lane breaking our necks so, in order to make smooth trajectories we have two variables that will help us: 
+  * `MAX_ACC` will say how much the car can accelerate and decelerate in miles/s^2.
+  * `spline` this is not a variable but a library that provides a function that makes smooth trajectories when you have a list of points.
+  
+  
+### 5. Please, do not crash my car:
+
+
+### 6. Smooth and safety and... FASTER:
