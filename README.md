@@ -51,7 +51,8 @@ A really helpful resource for doing this project and creating smooth trajectorie
   The car will move following the waypoints we receive from the data, so, in order to make the car start moving and going through the waypoints, we have to set the acceleration and the path the car will follow. The path is made by the 50 waypoints in front of the car and the acceleration is limited to 0.224 miles/s^2. That will be enought to get the car moving, but it will keep accelerating forever and speeding up the speed limit, and we do not want that. The car will also go through the forest when the lane is not straight (Lines 401 - 422)
   
 ### 2. Keep the car on the lane
-  For this purpose we
+  For this purpose we learned during previous lessons about Frenet coordianates. Frenet coordinates are a way of representing position on a road using the variables s and d. The s coordinate represents distance along the road (also known as longitudinal displacement) and the d coordinate represents side-to-side position on the road (also known as lateral displacement).
+  ![alt text](./img/frenet-1.png)
   
 ### 2. Do not be faster than the speed limit
   Since we do not want our car to have fees, we have to set a MAX_SPEED variable that the car will have to respect
