@@ -66,7 +66,10 @@ A really helpful resource for doing this project and creating smooth trajectorie
   * `spline` this is not a variable but a library that provides a function that makes smooth trajectories when you have a list of points.
   
   
-### 5. Please, do not crash my car:
+### 5. Do NOT crash my car:
+  Here is were the magic starts, since we want to take our car and passengers without damage, we need to know what the other cars in the road are doing. For this purpose we have the sensor fusion data. This data tells us where the other cars are (in x,y coordinates and s,d Frenet coordinates) and the speed they are going. This data is enought to avoid collisions and danger situations. What I have done here is to check the nearest lanes cars (speed and position related to us) and select the best option (keep my lane or change lane).
+  (Lines 279 - 297)
 
 
 ### 6. Smooth and safety and... FASTER:
+  We can not go allways behind a slow car since our goal is to reach our destination as fast, with the speed limit on mind, as possible. Because of that if we are behind a slow car and we can not overtake because there are other vehicles in the close lanes, the car will get the speed of the car ahead (Line 286) and copy it (Line 311), in order to be allways as fast as possible.
